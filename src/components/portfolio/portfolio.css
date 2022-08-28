@@ -1,0 +1,55 @@
+/* #portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+.portfolio__container{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-content: center;
+    /* padding: 2rem; */
+    /* border:2px solid red; */
+    gap: 2rem;
+}
+.portfolio__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background:var(--color-bg-variant);
+    width: 100%;
+    border-radius: 0.4rem;
+    margin:0 auto;
+}
+
+.portfolio__item img{
+    height:20rem;
+    margin:0 auto;
+    border-radius: 0.5rem;
+}
+.portfolio__item > h3{
+    padding:0 0 0 1rem;
+}
+.portfolio__cta{
+    display: flex;
+    gap: 1rem;
+    padding:0 0 1rem 1rem;
+    
+}
+
+/* ========================================MID DEVICES=========================== */
+@media only screen and (max-width:1024px) {
+    .portfolio__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+/* ========================================SMALL DEVICES=========================== */
+@media only screen and (max-width:600px) {
+    .portfolio__container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+

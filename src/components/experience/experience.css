@@ -1,0 +1,89 @@
+/* ======================experience container style========================= */
+.exp__container{
+    display: flex;
+    gap:2rem;
+    justify-content:center;
+    /* padding:1rem; */
+}
+.general{
+    grid-column: 1/span 2;
+}
+.exp__container > div{
+    padding:1rem 1rem;
+    display:flex;
+    width: 50%;
+    flex-direction:column;
+    gap:1rem;
+    border-radius:1rem;
+    cursor:pointer;
+    transition:var(--transtition);
+    background: rgba(255,255,255,0.1);
+}
+
+.exp__container > div:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+.general{
+    padding:2rem 0 0 0 ;
+}
+.general > div{
+    padding:2rem 1rem;
+    border-radius:1rem;
+    cursor:pointer;
+    background: rgba(255,255,255,0.1);
+}
+.general > div:hover{
+    background: rgba(255,255,255,0.2);
+}
+/* ==============================experience cards style======================================== */
+.expCard{
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem ;
+}
+
+.expCard > span{
+    font-size: 1.7rem;
+    margin: 2px 0 0 0; 
+} 
+
+/* ==============================progress bar========================================= */
+.progressBar{
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    background:var(--color-bg-variant);
+}
+
+.progressBar > div{
+    height:100%;
+    border-radius: inherit;
+}
+
+/*====================================== responsiveness======================================= */
+
+/*======================================= mid devices ===========================================*/
+
+@media only screen and (max-width:1024px) {
+    .exp__container {
+        flex-direction:column;
+    }
+    .exp__container > div{
+        width: auto;
+        flex-direction:column;
+
+    }
+
+}
+
+/*=========================================== small devices ====================================*/
+@media only screen and (max-width:400px) {
+    .expCard > span{
+        font-size: 1.4rem;
+    } 
+
+}
+

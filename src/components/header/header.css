@@ -1,0 +1,96 @@
+header{
+    /* padding-top:6rem ; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    /* border: 2px solid red; */
+}
+.header__container{
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+/* ********* CALL TO ACTION *********************** */
+.cta{
+    margin-top: 2rem;
+    display:flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+/* *********HEADER SOCIALS*********************** */
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 0.8rem;
+    position:absolute;
+    left: 0;
+    bottom: 3rem;
+}
+.header__socials::after{
+    content: "";
+    width: 2px;
+    border-radius: 5px;
+    height:3rem;
+    background: var(--color-primary);
+}
+
+/* ***************PROFILE IMAGE******************* */
+
+.me{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    /* border: 2px solid red; */
+    padding-bottom:2rem ;
+}
+.me img{
+    width:20rem;
+    height: 20rem;
+    border-radius: 11rem;
+    border: 0.5rem solid white;
+}
+/* ******************SCROLL DOWN*************** */
+
+.scroll__down{
+    position:absolute;
+    right:0;
+    bottom: 5rem;
+    transform: rotate(90deg);
+}
+
+/* ****************RESPONSIVENESS FOR MEDIUM DEVICES******************* */
+@media only screen and (max-width:1024px) {
+    header {
+        /* background:red; */
+        /* height: 7vh; */
+    }
+    .me img{
+        width: 15rem;
+        height:15rem ;
+    }
+    .header__socials{
+        display:none;
+    }
+    .scroll__down{
+        display:none;
+    }
+}
+
+
+/* ****************RESPONSIVENESS FOR SMALL DEVICES******************* */
+@media only screen and (max-width:600px) {
+    header {
+        /* background:red; */
+        /* height: 7vh; */
+    }
+    .me img{
+        width: 12rem;
+        height:12rem ;
+    }
+    .header__socials{
+        display:none;
+    }
+    .scroll__down{
+        display:none;
+    }
+}
