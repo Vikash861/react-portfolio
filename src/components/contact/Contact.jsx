@@ -10,11 +10,13 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_bd19gie', 'service_bd19gie', form.current, 'GHanAPbae1T7Az0vq')
+    emailjs.sendForm('service_bd19gie', 'template_4uwhx0e', form.current, 'GHanAPbae1T7Az0vq')
       .then((result) => {
-          console.log(result.text);
+        window.alert('Your Message has been sent');
+          // console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        window.alert('something went wrong please try again later');
+          // console.log(error.text);
       });
       e.target.reset()
   };
@@ -38,7 +40,7 @@ function Contact() {
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your full Name' required />
+          <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name='message' rows="7" placeholder='Your Message'required></textarea>
           <button type="submit" className="btn btn-primary">Send Message</button>

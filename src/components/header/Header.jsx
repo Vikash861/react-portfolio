@@ -4,6 +4,13 @@ import CTA from "./CTA"
 import pic from "../../assets/pic.jpg"
 import Socials from "./headerSocials"
 function Header() {
+  let careerName = "";
+  let careerName1 = "Fullstack Developer";
+  let careerName2 = "A Programmer";
+  // setTimeInterval
+
+
+
   return (
     <header id="#">
       <div className="container header__container">
